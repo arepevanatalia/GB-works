@@ -1,0 +1,34 @@
+Задача 1: Задайте одномерный массив из 10 целых чисел от 1 до 100. 
+Найдите количество элементов массива, значения которых лежат в отрезке [20,90].
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numbers = { 5, 30, 40, 15, 80, 95, 25, 70, 10, 50 };
+
+        int lower = 20;
+        int upper = 90;
+
+        int count = CountElementsInRange(numbers, lower, upper);
+
+        Console.WriteLine($"Количество элементов в отрезке [{lower}, {upper}]: {count}");
+    }
+
+    static int CountElementsInRange(int[] array, int lower, int upper)
+    {
+        int count = 0;
+
+        foreach (int num in array)
+        {
+            if (num >= lower && num <= upper)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
