@@ -1,0 +1,44 @@
+Задача 1: Задайте двумерный массив символов (тип char [,]). Создать строку из символов этого массива.
+
+using System;
+class Program 
+{
+  static void Main() 
+  {
+    char[,] charArray = new char[,]
+    {
+      {'G', 'o', 'o', 'd'},
+      {' ', 'd', 'a', 'y'}
+    };
+
+    string str = string.Empty;
+
+    for (int i = 0; i < charArray.GetLength(0); i++)
+    {
+       for (int j = 0; j < charArray.GetLength(1); j++)
+       {
+          str += charArray[i, j];
+       }
+    }
+
+     Console.WriteLine(str);
+  }
+}
+
+Задача 2: Задайте строку, содержащую латинские буквы в обоих регистрах. Сформируйте строку, в которой все заглавные буквы заменены на строчные.
+
+using System;
+class Program
+{
+  static void Main() 
+  {
+    string input = "COnveRsAtIOn";
+    string result = input.ToLower();
+    
+    Console.WriteLine(result);
+
+  }
+}
+
+Задача 3: Задайте произвольную строку. Выясните, является ли она палиндромом.
+
