@@ -42,3 +42,22 @@ class Program
 
 Задача 3: Задайте произвольную строку. Выясните, является ли она палиндромом.
 
+using System;
+class Program
+{
+  public static bool IsPalindrome(string str)
+  {
+    char[] charArray = str.ToCharArray();
+    Array.Reverse(charArray);
+    string reversedStr = new string(charArray);
+
+    return str.Equals(reversedStr, StringComparison.OrdinalIgnoreCase);
+  }
+
+  public static void Main()
+  {
+    string input = "кабак";
+    bool isPalindrome = IsPalindrome(input);
+    Console.WriteLine($"Является ли \"{input}\" палиндромом? {isPalindrome}");
+  }
+}
